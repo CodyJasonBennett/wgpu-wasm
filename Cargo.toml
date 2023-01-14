@@ -10,10 +10,13 @@ publish = false
 crate-type = ["cdylib"]
 
 [profile.release]
+debug = false
 lto = true
-opt-level = 's'
+opt-level = 'z'
+strip = true
+panic = 'abort'
 
 [dependencies]
-napi = "2.10.6"
-napi-derive = "2.9.4"
-wee_alloc = "0.4.5"
+napi = { default-features = false, version = "2.10.6" }
+napi-derive = { features = ["compat-mode"], default-features = false, version = "2.9.4" }
+wee_alloc = { default-features = false, version = "0.4.5" }

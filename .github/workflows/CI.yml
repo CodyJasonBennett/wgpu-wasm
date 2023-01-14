@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v2
 
       - name: Install dependencies
-        run: yarn install && rustup target add wasm32-unknown-unknown
+        run: yarn install && rustup target add wasm32-unknown-unknown && rustup toolchain install nightly && rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu
 
       - name: Check build health
         run: yarn build
