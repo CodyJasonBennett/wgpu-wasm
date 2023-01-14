@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v2
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install && rustup target add wasm32-unknown-unknown
 
       - name: Check build health
         run: yarn build
