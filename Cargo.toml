@@ -16,3 +16,4 @@ opt-level = 's'
 [dependencies]
 napi = "2.10.6"
 napi-derive = "2.9.4"
+wee_alloc = "0.4.5"

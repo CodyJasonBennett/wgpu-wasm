@@ -1,3 +1,6 @@
+#[global_allocator]
+static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
+
 #[no_mangle]
 pub extern "C" fn napi_wasm_malloc(size: usize) -> *mut u8 {
   let align = std::mem::align_of::<usize>();
@@ -22,10 +25,8 @@ pub extern "C" fn napi_wasm_malloc(size: usize) -> *mut u8 {
 pub unsafe extern "C" fn napi_register_wasm_v1(raw_env: napi::sys::napi_env, raw_exports: napi::sys::napi_value) {
   use napi::NapiValue;
 
-  let _env = napi::Env::from_raw(raw_env);
   let mut exports = napi::JsObject::from_raw_unchecked(raw_env, raw_exports);
-
-  exports.create_named_method("test", test);
+  exports.create_named_method("test", test).ok();
 }
 
 #[napi_derive::js_function(1)]

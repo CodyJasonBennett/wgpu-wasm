@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@types/node@^18.11.18":
+  version "18.11.18"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.18.tgz#8dfb97f0da23c2293e554c5a50d61ef134d7697f"
+  integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
+
 chownr@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
@@ -53,6 +58,16 @@ node-fetch@^2.6.7:
   dependencies:
     whatwg-url "^5.0.0"
 
+pkg-size@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/pkg-size/-/pkg-size-2.4.0.tgz#4f4b52d42b065e9ba2048e26f4fa87e80f02df7b"
+  integrity sha512-gAWAYAfYFgOk9mm9YWL/X3pjToUaVLHcdfsO52AjoPVFQlhZ3SH4nqTljcir/+3tzi/MFsReRI6tBVE6SNkZbQ==
+
+rimraf@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-4.0.4.tgz#8d0a91709fdc294d40f59c773f63c44e8dc878f1"
+  integrity sha512-R0hoVr9xTwemarQjoWlNt/nb5dEGVTBhVdkRmEX2zEkT8T6onH0XKiGjuaC7rNNj/gYzY2p4NVRJ3sjO1ascHQ==
+
 tar@^6.1.11:
   version "6.1.13"
   resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.13.tgz#46e22529000f612180601a6fe0680e7da508847b"
@@ -69,6 +84,11 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
   integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
+
+typescript@^4.9.4:
+  version "4.9.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.4.tgz#a2a3d2756c079abda241d75f149df9d561091e78"
+  integrity sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==
 
 wasm-opt@^1.3.0:
   version "1.3.0"
