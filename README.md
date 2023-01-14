@@ -1,1 +1,1 @@
-# wgpu
+# wgpu-wasm

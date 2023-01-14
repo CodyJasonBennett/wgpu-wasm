@@ -1,0 +1,21 @@
+{
+  "name": "wgpu-wasm",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "",
+  "keywords": [],
+  "author": "Cody Bennett (https://github.com/CodyJasonBennett)",
+  "homepage": "https://github.com/CodyJasonBennett/wgpu-wasm",
+  "repository": "https://github.com/CodyJasonBennett/wgpu-wasm",
+  "license": "MIT",
+  "devDependencies": {
+    "wasm-opt": "^1.3.0"
+  },
+  "dependencies": {
+    "napi-wasm": "^1.0.1"
+  },
+  "scripts": {
+    "build": "cargo build --release --target wasm32-unknown-unknown",
+    "postbuild": "mkdir dist && wasm-opt target/wasm32-unknown-unknown/release/wgpu_wasm.wasm -o dist/index.wasm -Oz"
+  }
+}

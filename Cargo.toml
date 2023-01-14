@@ -1,0 +1,18 @@
+# https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "wgpu-wasm"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+lto = true
+opt-level = 's'
+
+[dependencies]
+napi = "2.10.6"
+napi-derive = "2.9.4"
