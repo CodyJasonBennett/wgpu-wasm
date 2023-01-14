@@ -5,7 +5,9 @@ const url = new URL('index.wasm', import.meta.url)
 
 let instance
 
-if (typeof fetch === 'undefined') {
+// nodejs/undici fetch (global in Node 18) does not support the file: protocol,
+// so fallback to Node-specific FS read
+if (typeof process !== 'undefined' && process.release.name === 'node') {
   const fs = await import('node:fs')
   const module = await WebAssembly.compile(fs.readFileSync(url))
   instance = await WebAssembly.instantiate(module, { env: napi })
